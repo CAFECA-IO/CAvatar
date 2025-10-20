@@ -7,4 +7,7 @@ CAFECA Avatar Generator
 - Conda
 - check environment
 - Stable Diffusion
-- download models
+- download sd3.5_large.safetensors (models/checkpoints)
+- download clip_g.safetensors (models/clip)
+- download clip_l.safetensors (models/clip)
+- download 5xxl_fp16.safetensors (models/clip)
