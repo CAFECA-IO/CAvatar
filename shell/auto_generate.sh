@@ -39,4 +39,4 @@ positive_prompt="a photo of an anthropomorphic $selected_animal wearing a spaces
 negative_prompt="blurry, illustration, toy, clay, low quality, flag, nasa, mission patch"
 
 # 6. 執行 generate.sh 腳本，並傳入提示詞
-./generate.sh "$positive_prompt" "$negative_prompt"
+$(dirname "$0")/generate.sh "$positive_prompt" "$negative_prompt"
