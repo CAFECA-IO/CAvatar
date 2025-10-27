@@ -1693,8 +1693,9 @@ export const swipeCard = (card: Card, direction: 'left' | 'right'): Card[] => {
     const description = direction === 'left'
       ? event?.result[side][0][success ? 1 : 0] || '這是一張新的結果卡片'
       : event?.result[side][1][success ? 1 : 0] || '這是一張新的結果卡片';
-    const leftMessage = event?.response[side][0][success ? 1 : 0] || '';
-    const rightMessage = event?.response[side][1][success ? 1 : 0] || '';
+    const message = direction === 'left' ?
+      event?.response[side][0][success ? 1 : 0] || '' :
+      event?.response[side][1][success ? 1 : 0] || '';
     const effect = direction === 'left' ? leftEffect(success) : rightEffect(success);
 
     const newCard: Card = {
@@ -1703,9 +1704,9 @@ export const swipeCard = (card: Card, direction: 'left' | 'right'): Card[] => {
       finish: true,
       description,
       image: '',
-      leftMessage,
+      leftMessage: message,
       leftEffect: effect,
-      rightMessage,
+      rightMessage: message,
       rightEffect: effect
     };
     // Info: (20251027 - Luphia) 插入到下一張卡片的位置

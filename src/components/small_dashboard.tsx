@@ -20,17 +20,17 @@ function StatBar({ label, value, max }: StatBarProps) {
 
   return (
     <div className="flex items-center space-x-2 text-white">
-      {/* 標籤 */}
+      {/* Info: (20251027 - Luphia) 標籤 */}
       <span className="text-sm font-medium w-12 text-right">{label}</span>
 
-      {/* 長條圖背景 */}
+      {/* Info: (20251027 - Luphia) 長條圖背景 */}
       <div className="flex-1 bg-gray-600 rounded-full h-4 overflow-hidden relative">
-        {/* 長條圖前景 (動態寬度與顏色) */}
+        {/* Info: (20251027 - Luphia) 長條圖前景 (動態寬度與顏色) */}
         <div
           className={`h-4 rounded-full transition-all duration-300 ease-out ${barColorClass}`}
           style={{ width: `${percentage}%` }}
         />
-        {/* 數值固定在背景 bar 最右側 */}
+        {/* Info: (20251027 - Luphia) 數值固定在背景 bar 最右側 */}
         <span
           className="absolute right-1 top-1/2 -translate-y-1/2 text-xs font-mono select-none"
           style={{ color: '#fff', textShadow: '0 0 2px #000' }}
