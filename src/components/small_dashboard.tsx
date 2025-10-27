@@ -21,7 +21,7 @@ function StatBar({ label, value, max }: StatBarProps) {
   return (
     <div className="flex items-center space-x-2 text-white">
       {/* Info: (20251027 - Luphia) 標籤 */}
-      <span className="text-sm font-medium w-12 text-right">{label}</span>
+      <span className="text-sm font-medium w-5 text-right">{label}</span>
 
       {/* Info: (20251027 - Luphia) 長條圖背景 */}
       <div className="flex-1 bg-gray-600 rounded-full h-4 overflow-hidden relative">
@@ -59,9 +59,9 @@ export default function SmallDashboard({
   return (
     // Info: (20251027 - Luphia) 為了和 CardStack (w-72) 對齊，這裡也使用 w-72
     <div className="w-72 p-4 bg-gray-800 rounded-lg shadow-md space-y-2">
-      <StatBar label="信用" value={credit} max={MAX_VALUE} />
-      <StatBar label="體力" value={stamina} max={MAX_VALUE} />
-      <StatBar label="資源" value={resources} max={MAX_VALUE} />
+      <StatBar label="⭐" value={credit} max={MAX_VALUE} />
+      <StatBar label="💪" value={stamina} max={MAX_VALUE} />
+      <StatBar label="🪵" value={resources} max={MAX_VALUE} />
     </div>
   );
 }
