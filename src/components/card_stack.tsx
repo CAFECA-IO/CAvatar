@@ -8,7 +8,7 @@ import {
   animate,
   PanInfo,
 } from 'framer-motion';
-import { cardData, CardEffect, Card, swipeCard } from '@/lib/repo/card';
+import { cardData, CardEffect, Card, swipeCard } from '@/repositories/card';
 import Image from 'next/image';
 
 const SWIPE_THRESHOLD = 100;
@@ -123,7 +123,7 @@ export default function CardStack({ onSwipe }: CardStackProps) {
 
                 {/* Info: (20251027 - Luphia) --- 4. 修改：將 h2 包裹起來以保持置中 --- */}
                 <div className="w-full h-full flex items-center justify-center">
-                  <h2 className="text-3xl font-bold text-gray-800">
+                  <h2 className="text-3xl font-bold text-gray-700 bg-white/30 backdrop-blur-sm p-2 rounded-md">
                     {card.description}
                   </h2>
                 </div>

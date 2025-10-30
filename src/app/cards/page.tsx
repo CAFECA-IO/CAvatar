@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import CardStack from '@/components/card_stack';
 import SmallDashboard from '@/components/small_dashboard';
-import { Card } from '@/lib/repo/card';
+import { Card } from '@/repositories/card';
 
 // Info: (20251027 - Luphia) 狀態的型別
 interface GameStats {
@@ -59,11 +59,6 @@ export default function GamePage() {
 
       {/* Info: (20251027 - Luphia) 卡牌堆：傳入 handleSwipe 函數 */}
       <CardStack onSwipe={handleSwipe} />
-
-      {/* Info: (20251027 - Luphia) 遊戲結束的邏輯 */}
-      {stats.credit <= 0 && <h1 className="text-red-500 text-3xl font-bold">信用破產！遊戲結束</h1>}
-      {stats.stamina <= 0 && <h1 className="text-red-500 text-3xl font-bold">體力耗盡！遊戲結束</h1>}
-
     </div>
   );
 }
